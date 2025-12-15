@@ -19,6 +19,8 @@ app.use(express.urlencoded({extended: true}));
 app.use(
   cors({
     origin: [
+      "heavenglow-frontend-git-main-mr-dibyas-projects.vercel.app",
+      "heavenglow-frontend-git-main-mr-dibyas-projects.vercel.app/",
       "https://heavenglow-frontend.vercel.app",
       "https://heavenglow-frontend.vercel.app/",
       "http://localhost:5173",
