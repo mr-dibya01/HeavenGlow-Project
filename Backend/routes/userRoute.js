@@ -18,6 +18,3 @@ userRouter.post('/admin', verifyAdmin, wrapAsync(adminLogin));
 
 
 export default userRouter;
-
-
- 

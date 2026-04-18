@@ -22,6 +22,7 @@ app.use(cors({
       "https://heavenglow-frontend-git-main-mr-dibyas-projects.vercel.app/",
       "https://heavenglow-frontend.vercel.app",
       "https://heavenglow-frontend.vercel.app/",
+      "https://heavenglow-admin.vercel.app/",
       "http://localhost:5173",
       "http://localhost:5174"
     ],
@@ -48,5 +49,5 @@ app.use((err,req,res,next) => {
 })
 
 app.listen(4000,() => {
-    console.log('Server is listening at port: ', + port);
+  console.log('Server is listening at port: ', + port);
 })  

@@ -12,7 +12,7 @@ const userRegister =async (req,res) => {
     let existingUser = await User.findOne({ email });
 
     if(existingUser){
-        return res.status(httpStatus.FOUND).json({error: `Email ${email} alerdy registered`});
+        return res.status(httpStatus.FOUND).json({error: `Email ${email} already registered`});
     }
 
     let hashPassword = await bcryptjs.hash(password,10);
