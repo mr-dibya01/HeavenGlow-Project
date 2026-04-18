@@ -39,7 +39,7 @@ function Login({ setToken }) {
             />
           </div>
           <div>
-            <label htmlFor="" className="text-gray-600 text-sm">Email Address</label>
+            <label htmlFor="" className="text-gray-600 text-sm">Password</label>
             <input
               type="password"
               name="password"
