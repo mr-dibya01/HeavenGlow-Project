@@ -33,7 +33,7 @@ const PlaceOrder = () => {
       case "cod":
         try {
           let res = await axios.post(
-            baseurl + "api/order/place",
+            baseurl + "/api/order/place",
             { formData, cartItems, paymentMode, shipping_fee },
             { headers: { Authorization: `Bearer ${token}` } }
           );
@@ -50,7 +50,7 @@ const PlaceOrder = () => {
       case "razorpay":
         try {
           let res = await axios.post(
-            baseurl + "api/order/razor",
+            baseurl + "/api/order/razor",
             { formData, cartItems, paymentMode, shipping_fee },
             { headers: { Authorization: `Bearer ${token}` } }
           );
@@ -66,7 +66,7 @@ const PlaceOrder = () => {
             order_id: razorOrder.id,
             handler: async function (response) {
               const verify = await axios.post(
-                baseurl + "api/order/razor/verify",
+                baseurl + "/api/order/razor/verify",
                 {
                   razorpay_payment_id: response.razorpay_payment_id,
                   razorpay_order_id: response.razorpay_order_id,
@@ -104,7 +104,7 @@ const PlaceOrder = () => {
       case "stripe":
         try {
           let responseStripe = await axios.post(
-            baseurl + "api/order/stripe",
+            baseurl + "/api/order/stripe",
             { formData, cartItems, paymentMode, shipping_fee },
             { headers: { Authorization: `Bearer ${token}` } }
           );

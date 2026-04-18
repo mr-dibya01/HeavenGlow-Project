@@ -12,7 +12,7 @@ const TrackOrder = () => {
 
   const fetchOrder = async () => {
     try {
-      let res = await axios.get(baseurl + "api/order/user/list", {
+      let res = await axios.get(baseurl + "/api/order/user/list", {
         headers: { Authorization: `Bearer ${token}` }
       });
 

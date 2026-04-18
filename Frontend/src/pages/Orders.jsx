@@ -37,7 +37,7 @@ const Orders = () => {
     }
     let tempData=[];
     try {
-      let res =await axios.get(baseurl + 'api/order/user/list',{headers: {'Authorization': `Bearer ${token}`}});
+      let res =await axios.get(baseurl + '/api/order/user/list',{headers: {'Authorization': `Bearer ${token}`}});
 
       console.log("res.data=",res.data);
 

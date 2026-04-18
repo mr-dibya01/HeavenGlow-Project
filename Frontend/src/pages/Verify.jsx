@@ -20,7 +20,7 @@ function Verify() {
     }
     try {
       let res = await axios.put(
-        baseurl + "api/order/verifyStripe",
+        baseurl + "/api/order/verifyStripe",
         { orderId, success },
         { headers: { Authorization: `Bearer ${token}` } }
       );

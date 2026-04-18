@@ -16,10 +16,10 @@ const Login = () => {
     try {
       let res;
       if(currentState === 'login') {
-        res = await axios.post(baseurl+'api/user/login',formData);
+        res = await axios.post(baseurl+'/api/user/login',formData);
         console.log(res); 
       } else {
-        res = await axios.post(baseurl+'api/user/register',formData);
+        res = await axios.post(baseurl+'/api/user/register',formData);
         console.log(res);
       }
       if(res.data.success){
