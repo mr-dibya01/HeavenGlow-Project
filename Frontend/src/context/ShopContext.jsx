@@ -18,7 +18,7 @@ const ShopContextProvider = (props) => {
 
   async function fetchData() {
     try {
-      const productsData = await axios.get(baseurl + "api/product/list");
+      const productsData = await axios.get(baseurl + "/api/product/list");
       if (productsData.data && productsData.data.length > 0) {
         setProducts(productsData.data);
         setLoading(false);
@@ -39,7 +39,7 @@ const ShopContextProvider = (props) => {
       return;
     }
     try {
-      let res = await axios.get(baseurl + "api/cart/list", {
+      let res = await axios.get(baseurl + "/api/cart/list", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCartItems(res.data);
@@ -78,7 +78,7 @@ const ShopContextProvider = (props) => {
           price: productData.price,
         };
 
-        let res = await axios.post(baseurl + "api/cart/add", cartData, {
+        let res = await axios.post(baseurl + "/api/cart/add", cartData, {
           headers: { Authorization: `Bearer ${token}` },
         });
         console.log(res);
@@ -104,7 +104,7 @@ const ShopContextProvider = (props) => {
     console.log(id, size);
     setCartItems(cartItems.filter((item) => item._id !== id));
     try {
-      let res = await axios.delete(baseurl + "api/cart/remove", {
+      let res = await axios.delete(baseurl + "/api/cart/remove", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -149,7 +149,7 @@ const ShopContextProvider = (props) => {
 
     try {
       let res = await axios.put(
-        baseurl + "api/cart/update",
+        baseurl + "/api/cart/update",
         { cartItemId, size, action },
         { headers: { Authorization: `Bearer ${token}` } }
       );

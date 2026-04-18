@@ -82,7 +82,7 @@ function Add() {
     console.log("formData",formData);
     try {
       let res = await axios.post(
-        import.meta.env.VITE_SERVER_URL + "api/product/add",
+        import.meta.env.VITE_SERVER_URL + "/api/product/add",
         formData,
         {
           headers: {

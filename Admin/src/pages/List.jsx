@@ -10,7 +10,7 @@ function List({ token }) {
 
   const handleDeleteProduct =async (id) => {
     try {
-      let result=await axios.delete(baseUrl+`api/product/remove/${id}`,{
+      let result=await axios.delete(baseUrl+`/api/product/remove/${id}`,{
         headers:{ Authorization: `Bearer ${token}`}
       });
       fetchData();
@@ -23,7 +23,7 @@ function List({ token }) {
 
   let fetchData =async () => {
     try {
-      const productList = await axios.get(baseUrl + 'api/product/list');
+      const productList = await axios.get(baseUrl + '/api/product/list');
       setProductData(productList.data);
     } catch (err) {
       console.log(err);

@@ -17,7 +17,7 @@ function Order({ token }) {
       return null;
     }
     try {
-      let res = await axios.post(baseUrl + "api/order/list",{},{headers: { 'Authorization': `Bearer ${token}`}});
+      let res = await axios.post(baseUrl + "/api/order/list",{},{headers: { 'Authorization': `Bearer ${token}`}});
       if (res.data) {
         setOrderData(res.data);
       }
@@ -44,7 +44,7 @@ function Order({ token }) {
       return null;
     }
     try {
-      let res =await axios.put(baseUrl+'api/order/status',{orderId,status},{headers: { 'Authorization': `Bearer ${token}`}});
+      let res =await axios.put(baseUrl+'/api/order/status',{orderId,status},{headers: { 'Authorization': `Bearer ${token}`}});
       // console.log(res);
       fetchOrderData();
       toast.success('Order Updated');
