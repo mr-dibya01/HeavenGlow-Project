@@ -11,7 +11,7 @@ function Login({ setToken }) {
   const handleSubmit =async (e) => {
     e.preventDefault(); 
     try {
-      let res=await axios.post(import.meta.env.VITE_SERVER_URL + 'api/user/admin',formData);
+      let res=await axios.post(import.meta.env.VITE_SERVER_URL + '/api/user/admin',formData);
       // console.log(res);
       setToken(res.data.token);
     } catch (err) {
