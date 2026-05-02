@@ -9,9 +9,12 @@ export default function BestSeller() {
   let { products, loading } = useContext(ShopContext);
   // const newArray  = products.slice(10,20);
 
-  console.log(bestSeller);
+  // console.log("products1:", products);
+
+  // console.log(bestSeller);
 
   useEffect(() => {
+    // console.log("products2:", products);
     let bestProducts = products.filter((item) => item.bestSeller);
     setBestSeller(bestProducts.slice(0, 5));
   }, [products]);

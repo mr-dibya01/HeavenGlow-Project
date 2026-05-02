@@ -5,7 +5,7 @@ import ProductItem from "./ProductItem.jsx";
 import SkeletonCard from "./SkeletonCard.jsx";
 
 function LatestCollections() {
-  console.log("LatestCollections");
+  // console.log("LatestCollections");
   const [latestProducts, setLatestProducts] = useState([]);
   const { products, loading } = useContext(ShopContext);
   // console.log(products);

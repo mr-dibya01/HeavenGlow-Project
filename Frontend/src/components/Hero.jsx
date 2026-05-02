@@ -2,7 +2,7 @@ import React from 'react'
 import { assets } from '../assets/frontend_assets/assets'
 
 function Hero() {
-  console.log("Hero");
+  // console.log("Hero");
   return (
     <div className='flex flex-col md:flex-row border gap-4 sm:gap-0 border-gray-500'>
       {/* LeftSide */}

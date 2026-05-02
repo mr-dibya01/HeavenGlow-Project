@@ -36,7 +36,7 @@ const addProduct = async (req,res) => {
       bestSeller : bestSeller == 'true' ? true : false,
     }
   );
-  console.log(newProduct);
+  // console.log(newProduct);
   await newProduct.save();
 
   res.status(httpStatus.OK).json({  success: true,
@@ -46,6 +46,7 @@ const addProduct = async (req,res) => {
 
 const showAllProducts =async (req,res) => {
   let products =await Product.find({});
+  // console.log("productController.js",products);
   res.json(products);
 };
 
@@ -59,9 +60,9 @@ const removeProduct =async (req,res) => {
 };
 
 const singleProduct =async (req,res) => {
-  console.log(req.params.id);
+  // console.log(req.params.id);
   let product =await Product.findById(req.params.id);
-  console.log(product);
+  // console.log(product);
   if(!product) {
     res.status(httpStatus.NOT_FOUND).json({ error: "This product is not Availble"});
     return;

@@ -14,12 +14,12 @@ const Contact = () => {
         <div className='flex flex-col sm:text-start text-center sm:justify-center gap-6'>
           <h1 className='text-black text-base font-medium uppercase'>OUR STORE</h1>
           <div>
-            <p>54709 Willms Station</p> 
-            <p>Suite 350, Washington, USA</p>
+            <p>760001</p> 
+            <p>Berhmapur, Odisha, INDIA</p>
           </div>
           <div>
-            <p>Tel: (415) 555‑0132</p>
-            <p>Email: greatstackdev@gmail.com</p>
+            <p>Tel: 7788860049</p>
+            <p>Email: dibyaranjan.webdev@gmail.com</p>
           </div>
           <div className='flex flex-col gap-2'> 
             <p className='text-black text-base font-medium uppercase'>careers at forever</p>

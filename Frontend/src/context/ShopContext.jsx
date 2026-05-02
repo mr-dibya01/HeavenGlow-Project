@@ -16,9 +16,13 @@ const ShopContextProvider = (props) => {
   let [loading, setLoading] = useState(true);
   let [token, setToken] = useState(localStorage.getItem("token") || "");
 
+  // console.log("---------------",products)
+
   async function fetchData() {
     try {
       const productsData = await axios.get(baseurl + "/api/product/list");
+        // console.log("baseUrl", baseurl);
+        // console.log("productsData", productsData);
       if (productsData.data && productsData.data.length > 0) {
         setProducts(productsData.data);
         setLoading(false);
@@ -55,7 +59,7 @@ const ShopContextProvider = (props) => {
 
     useEffect(() => {
       localStorage.setItem("token", token);
-      // console.log(token);
+      // console.log("token", token);
       if (token) {
         fetchCartData();
       }

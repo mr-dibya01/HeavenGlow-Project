@@ -19,7 +19,7 @@ function Footer() {
         </div>
         <div>
           <h1 className='text-xl font-semibold mb-5 text-black'>GET IN TOUCH</h1>
-          <p className='hover:text-black transition-colors'>+91-000-000-0000</p>
+          <p className='hover:text-black transition-colors'>+91 7788860049</p>
           <p className='hover:text-black transition-colors'>dibyaranjan.webdev@gmail.com</p>
           <Link className='hover:text-black transition-colors' to={'https://www.instagram.com/build_yourownwebsite/'}>Instagram</Link>
         </div>
